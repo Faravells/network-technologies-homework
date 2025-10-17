@@ -1,0 +1,131 @@
+.header, .footer {
+    text-align: center;
+    background-color: #303030;
+    color: white;
+}
+.header {
+    margin-bottom: 10px;
+}
+.footer p, .header p {
+    margin: 0px;
+    padding: 15px;
+}
+.header p {
+    display: inline-block;
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+}
+.header a {
+    text-decoration: none;
+    color: white;
+}
+.header .active {
+    background-color: green;
+}
+
+.gallery {
+    width: 90%;
+    height: 300px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.gallery .bigpic {
+    width: 49%;
+    height: 50%;
+    display: inline-block;
+}
+.gallery .smallpic {
+    width: 25%;
+    height: 50%;
+    display: inline-block;
+}
+
+.body {
+    width: 90%;
+    margin: auto;
+}
+.body p {
+    margin: 0px;
+    text-align: justify;
+}
+.body a {
+    color: black;
+}
+.heading {
+    text-align: center;
+}
+.leftrightblocks {
+    width: 14%;
+    display: inline-block;
+    vertical-align: top;
+}
+.middleblock {
+    width: 70%;
+    display: inline-block;
+    vertical-align: top;
+}
+.bigcontent {
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+#text1 {
+    display: inline-block;
+    width: 55%;
+    margin-left: 1%;
+}
+#text2 {
+    display: inline-block;
+    width: 68%;
+}
+.bigcontent a {
+    background-color: royalblue;
+    color: white;
+    text-decoration: none;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 0px 5px;
+    margin: 10px;
+}
+#btn1 {
+    float: right;
+}
+#btn2 {
+    float: left;
+}
+.bigcontent .bigimage {
+    display: inline-block;
+    width: 42%;
+    vertical-align: top;
+    margin-bottom: 1%;
+}
+.bigcontent .smallimage {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    margin-bottom: 1%;
+}
+.bigcontent .smalltext {
+    width: 46%;
+    display: inline-block;
+    margin-right: 2%;
+    vertical-align: top;
+}
+.bigcontent .bigtext {
+    display: inline-block;
+    margin-left: 2%;
+    vertical-align: top;
+}
+.smallcontent {
+    margin-bottom: 5%;
+}
+.smallcontent .image {
+    border: 1px solid blue;
+}
+.leftrightblocks h4, .leftrightblocks p {
+    margin: 0px;
+    text-align: center;
+}
+img {
+    width: 100%;
+    height: 100%;
+}
