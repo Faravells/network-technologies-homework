@@ -1,0 +1,125 @@
+mixin createMenu(menu, active)
+    each value, key in menu
+        if active == key
+            a.active(href= value)= key
+        else
+            a(href= value)= key
+
+mixin createMenuBuild(menu, active)
+    each value, key in menu
+        if key == 'Заповедники России'
+            a(href= value)= key
+            a.active(href="#")= active
+        else
+            a(href= value)= key
+
+mixin createGallery(images)
+    each pict in images
+        if pict == 'Botchinskiy.jpg'
+            div.gallery_item--big
+                a(href= "description.html")
+                    img(src= require("../images/" + pict))
+        else
+            if pict == 'Astrachanskiy.jpg'
+                div.gallery_item--big
+                    img(src= require("../images/" + pict))
+            else
+                div.gallery_item--small
+                    img(src= require("../images/" + pict))
+
+mixin makeLeftRightContent(list)
+    each item in list
+        div.small-card
+            img(src= require("../images/" + item.image))
+            h3= item.header
+            p= item.text
+                a(href="#") &hellip;
+
+mixin createGraph
+    details
+        summary График
+        form
+        p
+            b Значение по оси ОХ 
+            br
+            label
+                input(type="radio" name="graph")
+                | Субъект РФ
+                br
+            label
+                input(type="radio" name="graph")
+                | Ближайший город
+                br
+        p
+            b Результат
+            br
+            label
+                input(type="checkbox")
+                | Максимальная площадь
+                br
+            label
+                input(type="checkbox")
+                | Минимальная площадь
+                br
+            label
+                input(type="checkbox")
+                | Количество заповедников
+        input(type="button" value="Построить")
+        p Здесь будет график
+
+mixin createFilter
+    details
+        summary Фильтр
+        form
+            p
+                label
+                    | Название: 
+                    input(type="text")
+            p
+                label
+                    | Субъект РФ: 
+                    input(type="text")
+            p
+                label
+                    | Ближайший город: 
+                    input(type="text")
+            p
+                label
+                    | Площадь от 
+                    input(type="number")
+                label
+                    |  до 
+                    input(type="number")
+            p
+                label
+                    | Дата образования от 
+                    input(type="date")
+                label
+                    |  до 
+                    input(type="date")
+            p
+                input(type="button" value="Найти")
+
+mixin createSortSelect
+    select
+        option Нет
+        option Название
+        option Субъект РФ
+        option Ближайший город
+        option Площадь
+        option Дата образования
+    |  по убыванию? 
+    input(type="checkbox")
+
+mixin createTable(header, data)
+    table(border="1" cellspacing="0" cellpadding="3")
+        tr
+            each field in header
+                th= field
+        each row in data
+            tr
+                td= row.f1
+                td= row.f2
+                td= row.f3
+                td= row.f4
+                td= row.f5

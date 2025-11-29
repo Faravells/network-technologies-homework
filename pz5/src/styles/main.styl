@@ -1,0 +1,112 @@
+colorText = #000000
+
+html
+  color colorText
+
+nav
+  back(0)
+  text-align right
+
+  & a
+    display inline-block
+    padding 1%
+    color colorText
+    text-decoration: none
+        
+    &:hover
+    &.active
+      background-color #f87777
+      color #f8f8f8   
+
+div.gallery
+  margin 10px auto
+  display grid
+  grid-template-columns repeat(4, 1fr)
+  grid-template-rows 150px 150px
+  gap 5px
+
+  & .gallery_item--big
+    grid-column span 2
+
+  & .gallery_item--big:first-child
+    grid-row 1
+
+  & img
+    width 100%
+    height @width
+
+div.body
+  display flex
+  gap 5px
+
+  & img
+    width 100%
+
+  & h3
+    margin auto
+    text-align center
+
+  & div.left-content
+  & div.right-content
+    display grid
+    gap 5px
+    flex 0 0 12%
+
+    & p
+      margin auto
+      text-align center
+
+  & div.middle-content
+    display grid
+    gap 5px
+
+    & p
+      text-align justify
+
+    & h3
+      padding 5px
+
+    & div.big-card
+      border 1px solid
+      padding 5px
+
+      &__big-card-main--first
+        display grid
+        grid-template-columns 1fr 1fr
+        gap 5px
+
+        & div.text
+          display flex
+          flex-direction column
+        
+        & button
+          align-self flex-end
+
+      &__big-card-main--second
+        display grid
+        grid-template-columns 1fr 2fr
+        gap 5px
+
+      & p
+        margin 0px
+
+      & button
+        background-color royalblue
+        color white
+        border 2px solid black
+        border-radius 5px
+        padding 3px 10px
+
+footer
+  background-color gray
+  color white
+  & h4
+    padding 10px
+
+@media (max-width: 600px)
+  div.body
+    grid-template-columns auto
+
+@media (max-width: 1000px)
+  div.body
+    grid-template-columns auto

@@ -1,0 +1,27 @@
+extends template
+
+block nav
+    nav
+        +createMenu(dictMenu, 'Список заповедников России')
+    
+block content
+    +createGraph
+
+    +createFilter
+
+    details
+        summary Сортировка
+        form
+            p
+                | Первый уровень: 
+                +createSortSelect
+            p 
+                | Второй уровень: 
+                +createSortSelect
+            p 
+                | Третий уровень: 
+                +createSortSelect
+            input(type="button" value="Сортировать")
+
+    br
+    +createTable(tableHeader, tableData)
