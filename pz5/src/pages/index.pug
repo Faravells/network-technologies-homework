@@ -17,7 +17,7 @@ block content
                 div.big-card
                     h3= listMiddleContent[0].header
                     div.big-card__big-card-main--first
-                        div.text
+                        div.big-card-main__text
                             p= listMiddleContent[0].text1
                             p= listMiddleContent[0].text2
                             button(type="button") Подробнее»
@@ -27,7 +27,7 @@ block content
                     h3= listMiddleContent[1].header
                     div.big-card__big-card-main--second
                         img(src= require("../images/" + listMiddleContent[1].image))
-                        div.text
+                        div.big-card-main__text
                             p= listMiddleContent[1].text1
                             p= listMiddleContent[1].text2
                             button(type="button") Подробнее»

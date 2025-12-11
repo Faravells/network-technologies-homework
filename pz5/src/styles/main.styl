@@ -75,7 +75,7 @@ div.body
         grid-template-columns 1fr 1fr
         gap 5px
 
-        & div.text
+        & div.big-card-main__text
           display flex
           flex-direction column
         
@@ -104,9 +104,19 @@ footer
     padding 10px
 
 @media (max-width: 600px)
-  div.body
-    grid-template-columns auto
+  div.gallery
+    grid-template-rows 50px 50px
 
-@media (max-width: 1000px)
   div.body
-    grid-template-columns auto
+    flex-direction column
+
+    & div.left-content
+      order 2
+
+@media (min-width: 600px) and (max-width: 1000px)
+  div.gallery
+    grid-template-rows 100px 100px
+
+  div.body
+    & div.left-content
+      order 2
