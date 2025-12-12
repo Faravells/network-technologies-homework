@@ -1,0 +1,16 @@
+#output {
+    background-color: lightgray;
+    text-align: center;
+}
+
+.inputError {
+    border: solid thin red;
+}
+
+.findError {
+    color: red;
+}
+
+#find label {
+    color: black;
+}

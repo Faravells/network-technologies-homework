@@ -1,0 +1,56 @@
+<html lang="ru">
+<head>
+ <meta charset="utf-8">
+ <link rel="stylesheet" href="style.css">
+ <title>Онлайн-калькулятор</title>
+</head>
+<body>
+
+ <form>
+  <label><b>Выберите входные данные:</b>
+   <select id="inputSelect">
+    <option value="1">Основания трапеции и боковая сторона</option>
+    <option value="2">Основания трапеции и угол между основанием и боковой стороной</option>
+   </select>
+  </label>
+  <input type="button" value="Показать" onClick="change(this.form)">
+ </form>
+
+ <div class="task">
+  <img id="image" src="images/img1.jpg" alt="">
+  <div class="input">
+   <form>
+    <p>
+     <label>a =
+      <input type="number" id="input1" min=0 max=200 placeholder="a < b">
+     </label>
+    </p>
+    <p>
+     <label>b =
+      <input type="number" id="input2" min=0 max=200 placeholder="a < b">
+     </label>
+    </p>
+    <p>
+     <label>c =
+      <input type="number" id="input3" min=0 max=200>
+     </label>
+    </p>
+    <p id="find">
+     <b>Найти:</b> <br>
+     <label><input type="checkbox" id="task1"> длина диагонали</label><br>
+     <label><input type="checkbox" id="task2"> высота от основания к боковой стороне</label><br>
+     <label><input type="checkbox" id="task3"> угол между диагоналями</label>
+    </p>
+    <p>
+     <input type="button" value="Вычислить" onClick="calculate(this.form)">
+     <input type="button" value="Очистить" onClick="clearData(this.form)">
+    </p>
+   </form>
+  </div>
+  <div id="output">
+  </div>
+ </div>
+
+</body>
+<script src="program.js"> </script>
+</html>
