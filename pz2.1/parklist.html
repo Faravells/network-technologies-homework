@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Фильтры и сортировка</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JavaScript/data.js"></script>
+    <script src="JavaScript/main.js"></script>
+    <script src="JavaScript/table.js"></script>
+    <script src="JavaScript/filter.js"></script>
+    <script src="JavaScript/sort.js"></script>
+</head>
+<body>
+    <a href="index.html">Заповедники России</a><br>
+    <a href="parklist.html"><b>Список заповедников России</b></a>
+    <hr>
+    <details>
+        <summary>График</summary>
+        <form>
+            <p>
+                <b>Значение по оси ОХ</b><br>
+                <label><input type="radio" name="graph">Субъект РФ<br></label>
+                <label><input type="radio" name="graph">Ближайший город<br></label>
+            </p>
+            <p>
+                <b>Результат</b><br>
+                <label><input type="checkbox">Максимальная площадь<br></label>
+                <label><input type="checkbox">Минимальная площадь<br></label>
+                <label><input type="checkbox">Количество заповедников</label>
+            </p>
+            <input type="button" value="Построить">
+        </form>
+        <p>Здесь будет график</p>
+    </details>
+    <details>
+        <summary>Фильтр</summary>
+        <form id="filter">
+            <p>
+                <label for="name">Название:</label>
+                <input type="text" id="name">
+            </p>
+            <p>
+                <label for="region">Субъект РФ:</label>
+                <input type="text" id="region">
+            </p>
+            <p>
+                <label for="city">Ближайший город:</label>
+                <input type="text" id="city">
+            </p>
+            <p>
+                <label for="areaFrom">Площадь, км²:</label>
+                от <input type="number" id="areaFrom">
+                до <input type="number" id="areaTo">
+            </p>
+            <p>
+                <label for="yearFrom">Год образования:</label>
+                от <input type="number" id="yearFrom">
+                до <input type="number" id="yearTo">
+            </p>
+            <input id="findBtn" type="button" value="Найти">
+            <input id="clearBtn" type="button" value="Очистить фильтры">
+        </form>
+    </details>
+    <details>
+        <summary>Сортировка</summary>
+        <form id="sort">
+            <p>
+                Первый уровень: 
+                <select id="fieldsFirst">
+                </select>
+                по убыванию? <input type="checkbox" id="fieldsFirstDesc">
+            </p>
+            <p>
+                Второй уровень:
+                <select id="fieldsSecond">
+                </select>
+                по убыванию? <input type="checkbox" id="fieldsSecondDesc">
+            <p>
+                Третий уровень:
+                <select id="fieldsThird">
+                </select>
+                по убыванию? <input type="checkbox" id="fieldsThirdDesc">
+            </p>
+            <input id="sortBtn" type="button" value="Сортировать">
+            <input id="resetSortBtn" type="button" value="Сбросить сортировку">
+        </form>
+    </details><br>
+    <table id="list">
+    </table>
+    <hr>
+</body>
+</html>
