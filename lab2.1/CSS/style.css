@@ -1,0 +1,14 @@
+table {
+    margin: auto;
+    background-color: lightgray;
+}
+
+th {
+    background-color: darkgray;
+    padding: 3px;
+}
+
+td {
+    background-color: snow;
+    padding: 3px;
+}
