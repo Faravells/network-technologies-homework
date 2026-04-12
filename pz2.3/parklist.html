@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Фильтры и сортировка</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JavaScript/data.js"></script>
+    <script src="JavaScript/main.js"></script>
+    <script src="JavaScript/table.js"></script>
+    <script src="JavaScript/filter.js"></script>
+    <script src="JavaScript/sort.js"></script>
+    <script src="JavaScript/chart.js"></script>
+    <script src="JavaScript/d3.v7.min.js"></script>
+</head>
+<body>
+    <a href="index.html">Заповедники России</a><br>
+    <a href="parklist.html"><b>Список заповедников России</b></a>
+    <hr>
+    <details>
+        <summary>График</summary>
+        <form id="setting">
+            <p>
+                Значение по оси ОХ<br>
+                <input type="radio" name="ox" id="subject" checked="checked" value="Субъект РФ">
+                <label for="subject">Субъект РФ</label><br>
+                <input type="radio" name="ox" id="nearCity" value="Ближайший город">
+                <label for="nearCity">Ближайший город</label>
+            </p>
+            <p id="checkboxP">
+                Значение по оси OY<br>
+                <input type="checkbox" name="oy" id="maxArea" checked="checked" value="max">
+                <label for="maxArea">Максимальная площадь</label><br>
+                <input type="checkbox" name="oy" id="minArea" value="min">
+                <label for="minArea">Минимальная площадь</label>
+            </p>
+            <p>
+                <label for="graphType">Тип графика</label>
+                <select id="graphType">
+                    <option value="0">Точечная диаграмма</option>
+                    <option value="1">Гистограмма</option>
+                </select>
+            </p>
+            <input id="buildBtn" type="button" value="Построить">
+        </form>
+        <svg width="800" height="400"></svg>
+    </details>
+    <details>
+        <summary>Фильтр</summary>
+        <form id="filter">
+            <p>
+                <label for="name">Название:</label>
+                <input type="text" id="name">
+            </p>
+            <p>
+                <label for="region">Субъект РФ:</label>
+                <input type="text" id="region">
+            </p>
+            <p>
+                <label for="city">Ближайший город:</label>
+                <input type="text" id="city">
+            </p>
+            <p>
+                <label for="areaFrom">Площадь, км²:</label>
+                от <input type="number" id="areaFrom">
+                до <input type="number" id="areaTo">
+            </p>
+            <p>
+                <label for="yearFrom">Год образования:</label>
+                от <input type="number" id="yearFrom">
+                до <input type="number" id="yearTo">
+            </p>
+            <input id="findBtn" type="button" value="Найти">
+            <input id="clearBtn" type="button" value="Очистить фильтры">
+        </form>
+    </details>
+    <details>
+        <summary>Сортировка</summary>
+        <form id="sort">
+            <p>
+                Первый уровень: 
+                <select id="fieldsFirst">
+                </select>
+                по убыванию? <input type="checkbox" id="fieldsFirstDesc">
+            </p>
+            <p>
+                Второй уровень:
+                <select id="fieldsSecond">
+                </select>
+                по убыванию? <input type="checkbox" id="fieldsSecondDesc">
+            <p>
+                Третий уровень:
+                <select id="fieldsThird">
+                </select>
+                по убыванию? <input type="checkbox" id="fieldsThirdDesc">
+            </p>
+            <input id="sortBtn" type="button" value="Сортировать">
+            <input id="resetSortBtn" type="button" value="Сбросить сортировку">
+        </form>
+    </details><br>
+    <table id="list">
+    </table>
+    <hr>
+</body>
+</html>
