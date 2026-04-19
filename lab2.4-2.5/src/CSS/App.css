@@ -1,0 +1,48 @@
+table {
+  background-color: lightgray;
+}
+
+th {
+  background-color: darkgray;
+  padding: 3px;
+  border: 1px solid black;
+}
+
+td {
+  background-color: snow;
+  padding: 5px;
+  border: 1px solid darkgray;
+}
+
+.hide {
+  display: none;
+}
+
+span {
+  padding: 10px;
+}
+
+span:hover {
+  cursor: pointer;
+}
+
+.selectedPage {
+  font-weight: bold;
+  font-size: large;
+  color: darkblue;
+}
+
+svg {
+  width: 800px;
+  height: 400px;
+}
+
+svg path, line {
+  fill: none;
+  stroke: black;
+  width: 1px;
+}
+
+svg text {
+  font: 8px Verdana;
+}
